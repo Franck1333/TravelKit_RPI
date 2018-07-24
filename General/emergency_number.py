@@ -11,7 +11,7 @@
 #------------------------------------------------------------
 # Add the root GPS dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/Desktop/TravelKit_RPI/GPS')
+sys.path.append('/home/pi/TravelKit_RPI/GPS')
 from GPSoI import recuperation_coordonees_ip
 #------------------------------------------------------------
 #from GPSoI import recuperation_coordonees_ip    #Nous utilisons la localisation de l'Adresse IP de l'utilisateur pour localiser son continent actuel pour lui transmettre les informations correspondant a sa localisation
@@ -63,4 +63,3 @@ def numero_urgence():
 if __name__ == "__main__":
     clear_cache()
     numero_urgence()   #Programme permettant de connaitre le ou les numéros d'Urgence en cas de problème correspondant à la localisation du contient exacte de l'Adresse IP de l'utilisateur
-

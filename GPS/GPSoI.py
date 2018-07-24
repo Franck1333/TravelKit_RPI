@@ -54,7 +54,7 @@ def recuperation_coordonees_ip():
     print("Les Coordonees exactes de l'Adresse IP utilise:",continent_name,country_name,region_name,ZIP,city)
     #Information Géographique --FIN--
 
-    return continent_name,latitude,longitude,city      #Retourne le nom du continent où est localiser l'adresse I.P
+    return continent_name,latitude,longitude     #Retourne le nom du continent où est localiser l'adresse I.P
     #return latitude,longitude                         #Retourne les variables obtenue dans le cadre d'une utilisation ultérieur de ses valeurs
 #----------
 

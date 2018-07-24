@@ -7,7 +7,7 @@ import time #time.sleep(valeur de temps)
 #------------------------------------------------------------
 # Add the root GPS dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/Desktop/TravelKit_RPI/GPS')
+sys.path.append('/home/pi/TravelKit_RPI/GPS')
 from Boussole import boussole
 from Recuperation_Determination import lecture_serie
 #------------------------------------------------------------

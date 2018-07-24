@@ -7,7 +7,7 @@ import time #time.sleep(valeur de temps)
 #------------------------------------------------------------
 # Add the root GPS dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/Desktop/TravelKit_RPI/GPS')
+sys.path.append('/home/pi/TravelKit_RPI/GPS')
 from Meteo_3h import main_meteo_3h
 from Meteo_3h import confirme_erreur_ville
 from Recuperation_Determination import lecture_serie

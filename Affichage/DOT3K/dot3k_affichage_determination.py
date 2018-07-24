@@ -7,7 +7,7 @@ import time
 #------------------------------------------------------------
 # Add the root GPS dir so Python can find the modules
 import sys
-sys.path.append('/home/pi/Desktop/TravelKit_RPI/GPS')
+sys.path.append('/home/pi/TravelKit_RPI/GPS')
 from Recuperation_Determination import recup_affichage
 from Recuperation_Determination import determine_less
 from Recuperation_Determination import parse_GPRMC
