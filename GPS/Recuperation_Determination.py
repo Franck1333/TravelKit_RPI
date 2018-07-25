@@ -377,4 +377,19 @@ def main():
         #determine_less()
         
 if __name__ == "__main__":
-    main()   
+    try:                                                                #---!!!GESTION DES ERREURS!!!---
+        main()
+        pass
+    except TypeError:
+	print("Le signal GPS est degradé , veuillez-vous deplacez!")                    #On affiche ce message dans la console
+        print("Code Erreur: TypeError")
+    except ValueError:
+	print("Le signal GPS est degradé , veuillez-vous deplacez!")                    #On affiche ce message dans la console
+        print("Code Erreur: ValueError")
+    except AssertionError:
+	print("Le Signal GPS est degradé , veuillez-vous deplacez!")                    #On affiche ce message dans la console
+        print("Code Erreur: AssertionError")
+    except:
+	print("Il est necessaire de Redemarrez le GPS!")                                #On affiche ce message dans la console
+        print("Code Erreur: Aucun")
+                                                                         #---!!!GESTION DES ERREURS!!!---
