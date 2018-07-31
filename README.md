@@ -125,7 +125,7 @@ dot3k_affichage_boussole.py 		: Launch the feature "Boussole" in the folder "GPS
 
 dot3k_affichage_determination.py 	: Launch the feature "Recuperation_Determination" in the folder "GPS" and display the Location
 
-dot3k_affichage_emergency_number.py : Launch the feature "emergency_number" in the folder "General" and display the continent's Emergencies Numbers
+dot3k_affichage_emergency_number.py 	: Launch the feature "emergency_number" in the folder "General" and display the continent's Emergencies Numbers
 
 dot3k_affichage_meteo.py 		: Launch the feature "Meteo" in the folder "GPS" and display the Weather data
 
@@ -144,7 +144,7 @@ dot3k.cfg 				: Configuration file for the DOT3K display
  - Future features
 ```
 assistant_audio.py 		: I would like to develop an Audio Assistant that tell the User important informations
-sifflet_numerique.py 	: I would like to develop a numeric whistle that can be usefull in case of avalanche or flood to locate the user fast as possible in this kind of cases
+sifflet_numerique.py 		: I would like to develop a numeric whistle that can be usefull in case of avalanche or flood to locate the user fast as possible in this kind of cases
 ```
 #### Files in "/TravelKit_RPI/General/"
 - Usefull and common informations
