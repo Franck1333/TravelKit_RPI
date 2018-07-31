@@ -18,7 +18,7 @@ To use the project , you will need some Hardware:
 A Raspberry Pi
 A USB G.P.S (Ublox-7) -->  http://amzn.eu/aG9vR3t
 A Micro S.D card (8 Gb Minimum)
-A screen (Diplayotron 3000 or other lcd) 
+A screen (Diplayotron 3000 or other Displays) 
 ```  
   And you will also need some libraries and softwares :
 
