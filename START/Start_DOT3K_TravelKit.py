@@ -35,6 +35,14 @@ def ouvrir_lumiere():
     os.system('sudo python /home/pi/TravelKit_RPI/Affichage/DOT3K/light_blue_cyan.py')    
     #---------LIGHT---------
 
+def ouvrir_temps_time():
+    print("\n")
+    print("ouvrir_temps_time")
+
+    #---------temps_time---------
+    os.system('sudo python /home/pi/TravelKit_RPI/Affichage/DOT3K/dot3k_affichage_temps_système.py')    
+    #---------temps_time---------
+
 def ouvrir_boussole():
     print("\n")
     print("ouvrir_boussole")
@@ -84,6 +92,8 @@ def lancement():
         time.sleep(2)
         ouvrir_lumiere()
         time.sleep(2)
+        ouvrir_temps_time()
+        time.sleep(3)
         
         ouvrir_emergency_number()
         time.sleep(5)
