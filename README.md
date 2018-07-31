@@ -100,7 +100,7 @@ AND WRITE before "exit 0":
 
 ## Running the tests  
   
-For now , you have to run the project by using this command to each files:
+That's how to test features:
 
     sudo python file.py
 
