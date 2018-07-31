@@ -127,17 +127,17 @@ dot3k_affichage_determination.py 	: Launch the feature "Recuperation_Determinati
 
 dot3k_affichage_emergency_number.py : Launch the feature "emergency_number" in the folder "General" and display the continent's Emergencies Numbers
 
-dot3k_affichage_meteo.py 			: Launch the feature "Meteo" in the folder "GPS" and display the Weather data
+dot3k_affichage_meteo.py 		: Launch the feature "Meteo" in the folder "GPS" and display the Weather data
 
 dot3k_affichage_meteo_3h.py 		: Launch the feature "Meteo_3h" in the folder "GPS" and display the Weather data with a forecast of 3 Hours
 
-dot3k_affichage_temps_système.py 	: Launch the feature "temps" in the folder "General" and display the system time
+dot3k_affichage_temps_systÃ¨me.py 	: Launch the feature "temps" in the folder "General" and display the system time
 
-light_blue_cyan.py 					: Put a Swagg Cyan colors for the light of the Screen to be more readable
+light_blue_cyan.py 			: Put a Swagg Cyan colors for the light of the Screen to be more readable
 
-nettoyage_du_cache.py 				: Delete the Python Cache files (*.pyc)
+nettoyage_du_cache.py 			: Delete the Python Cache files (*.pyc)
 
-dot3k.cfg 							: Configuration file for the DOT3K display
+dot3k.cfg 				: Configuration file for the DOT3K display
 
 ```
 #### Files in "/TravelKit_RPI/EXTRA/"
@@ -149,20 +149,20 @@ sifflet_numerique.py 	: I would like to develop a numeric whistle that can be us
 #### Files in "/TravelKit_RPI/General/"
 - Usefull and common informations
 ```
-Date_Heure_Annee.py : Get the time with more details
-emergency_number.py : Get the Emergencies Phones Numbers of your continents by locate using the GPSoI.py file in the "GPS" folder
-temps.py 			: Get the system time basically
+Date_Heure_Annee.py 	: Get the time with more details
+emergency_number.py 	: Get the Emergencies Phones Numbers of your continents by locate using the GPSoI.py file in the "GPS" folder
+temps.py 		: Get the system time basically
 ```
 
 #### Files in "/TravelKit_RPI/GPS/"
 - GPS data
 ```
 Boussole.py 					: Get Compass data by using the "Recuperation_Determination.py" file's data
-GPSoI.py 						: Get the location of the user's IP Adress by using the *IPSTACK.COM API*
-Meteo.py 						: Get the Weather's data by using *"pyown" API* and the "Recuperation_Determination.py" file's data
+GPSoI.py 					: Get the location of the user's IP Adress by using the *IPSTACK.COM API*
+Meteo.py 					: Get the Weather's data by using *"pyown" API* and the "Recuperation_Determination.py" file's data
 Meteo_3h.py 					: Get the Weather's data by using *"pyown" API* and the "Recuperation_Determination.py" file's data with a forecast of 3 Hours
-Recuperation_Determination.py 	: Allow to get information come from the GPS USB stick and determinate where we are and what to do with variables states with the *"Google Maps" API*
-Recuperation_FR_GPS.py 			: Allow to display the information come from the GPS USB stick in French
+Recuperation_Determination.py 			: Allow to get information come from the GPS USB stick and determinate where we are and what to do with variables states with the *"Google Maps" API*
+Recuperation_FR_GPS.py 				: Allow to display the information come from the GPS USB stick in French
 ```
 #### Files in "/TravelKit_RPI/START/"
 - Start FILES
