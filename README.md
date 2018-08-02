@@ -61,6 +61,8 @@ To get and install the files , use this line :
 git clone https://github.com/Franck1333/TravelKit_RPI.git
 ```
 
+- When the project is Downloaded and Installed , check your "pi" folder , and you will see the folder "TravelKit_RPI"
+
 ### NEED TO BE INSTALL BEFORE RUNNING
 
 #### The Weather API :
