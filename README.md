@@ -12,10 +12,10 @@ git clone https://github.com/Franck1333/TravelKit_RPI.git
   
 ### Prerequisites  
   
-To use the project , you will need some Hardware:
+To use the project , you will need some Hardware :
   
 ```  
-A Raspberry Pi
+A Raspberry Pi (Version 3 is better)
 A USB G.P.S (Ublox-7) -->  http://amzn.eu/aG9vR3t
 A Micro S.D card (8 Gb Minimum)
 A screen (Diplayotron 3000 or other Displays) 
@@ -44,7 +44,7 @@ A screen (Diplayotron 3000 or other Displays)
 
 ```
 
-Now especially for the Display'O'Tron 3000 in our case
+Now especially for the Display'O'Tron 3000 in our case :
 
 ```
 	- The Github page : https://github.com/pimoroni/displayotron
@@ -87,7 +87,7 @@ To run the project ; if you want to see the console activities , you can launch 
 To run the project ; if you want to see the console activities , you can launch the file called "Start_DOT3K_TravelKit.py" into the Command Line Prompt with "sudo python Start_DOT3K_TravelKit.py" in the folder "START"
 
 #### The Fourth Way to run the project :
-To run the project ; if you want the project run automatically when system start-up : Go to launch a Prompt and type:
+To run the project ; if you want the project run automatically when system start-up ; Go to launch a Prompt and type:
 
 ```
 >>sudo nano /etc/rc.local
