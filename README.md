@@ -58,7 +58,7 @@ Now especially for the Display'O'Tron 3000 in our case :
 ### Installing  
 To get and install the files , use this line : 
 ```
-git clone  [https://github.com/Franck1333/TravelKit_RPI.git](https://github.com/Franck1333/TravelKit_RPI.git)
+git clone https://github.com/Franck1333/TravelKit_RPI.git
 ```
 
 ### NEED TO BE INSTALL BEFORE RUNNING
