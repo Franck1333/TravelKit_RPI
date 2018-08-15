@@ -12,10 +12,10 @@ git clone https://github.com/Franck1333/TravelKit_RPI.git
   
 ### Prerequisites  
   
-To use the project , you will need some Hardware:
+To use the project , you will need some Hardware :
   
 ```  
-A Raspberry Pi
+A Raspberry Pi (Version 3 is better)
 A USB G.P.S (Ublox-7) -->  http://amzn.eu/aG9vR3t
 A Micro S.D card (8 Gb Minimum)
 A screen (Diplayotron 3000 or other Displays) 
@@ -44,7 +44,7 @@ A screen (Diplayotron 3000 or other Displays)
 
 ```
 
-Now especially for the Display'O'Tron 3000 in our case
+Now especially for the Display'O'Tron 3000 in our case :
 
 ```
 	- The Github page : https://github.com/pimoroni/displayotron
@@ -56,7 +56,12 @@ Now especially for the Display'O'Tron 3000 in our case
 ```
   
 ### Installing  
-To get and install the files , use this line : git clone  [https://github.com/Franck1333/TravelKit_RPI.git](https://github.com/Franck1333/TravelKit_RPI.git)
+To get and install the files , use this line : 
+```
+git clone https://github.com/Franck1333/TravelKit_RPI.git
+```
+
+- When the project is Downloaded and Installed , check your "pi" folder , and you will see the folder "TravelKit_RPI"
 
 ### NEED TO BE INSTALL BEFORE RUNNING
 
@@ -87,7 +92,7 @@ To run the project ; if you want to see the console activities , you can launch 
 To run the project ; if you want to see the console activities , you can launch the file called "Start_DOT3K_TravelKit.py" into the Command Line Prompt with "sudo python Start_DOT3K_TravelKit.py" in the folder "START"
 
 #### The Fourth Way to run the project :
-To run the project ; if you want the project run automatically when system start-up : Go to launch a Prompt and type:
+To run the project ; if you want the project run automatically when system start-up ; Go to launch a Prompt and type:
 
 ```
 >>sudo nano /etc/rc.local
@@ -133,7 +138,7 @@ dot3k_affichage_meteo_3h.py 		: Launch the feature "Meteo_3h" in the folder "GPS
 
 dot3k_affichage_temps_système.py 	: Launch the feature "temps" in the folder "General" and display the system time
 
-light_blue_cyan.py 			: Put a Swagg Cyan colors for the light of the Screen to be more readable
+light_blue_cyan.py 			: Put a Swagg Cyan color for the light of the Screen to be more readable
 
 nettoyage_du_cache.py 			: Delete the Python Cache files (*.pyc)
 
@@ -144,7 +149,7 @@ dot3k.cfg 				: Configuration file for the DOT3K display
  - Future features
 ```
 assistant_audio.py 		: I would like to develop an Audio Assistant that tell the User important informations
-sifflet_numerique.py 		: I would like to develop a numeric whistle that can be usefull in case of avalanche or flood to locate the user fast as possible in this kind of cases
+sifflet_numerique.py 		: I would like to develop a numeric whistle that can be usefull in case of avalanche or flood to locate the user the fast as possible in this kind of cases
 ```
 #### Files in "/TravelKit_RPI/General/"
 - Usefull and common informations
@@ -159,9 +164,9 @@ temps.py 		: Get the system time basically
 ```
 Boussole.py 					: Get Compass data by using the "Recuperation_Determination.py" file's data
 GPSoI.py 					: Get the location of the user's IP Adress by using the *IPSTACK.COM API*
-Meteo.py 					: Get the Weather's data by using *"pyown" API* and the "Recuperation_Determination.py" file's data
-Meteo_3h.py 					: Get the Weather's data by using *"pyown" API* and the "Recuperation_Determination.py" file's data with a forecast of 3 Hours
-Recuperation_Determination.py 			: Allow to get information come from the GPS USB stick and determinate where we are and what to do with variables states with the *"Google Maps" API*
+Meteo.py 					: Get the Weather's data by using *pyown API* and the "Recuperation_Determination.py" file's data
+Meteo_3h.py 					: Get the Weather's data by using *pyown API* and the "Recuperation_Determination.py" file's data with a forecast of 3 Hours
+Recuperation_Determination.py 			: Get information come from the GPS USB stick and determinate the location with the *Google Maps API*
 Recuperation_FR_GPS.py 				: Allow to display the information come from the GPS USB stick in French
 ```
 #### Files in "/TravelKit_RPI/START/"
