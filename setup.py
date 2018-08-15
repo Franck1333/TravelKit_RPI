@@ -16,6 +16,6 @@ setup(
     license='lgpl',
     packages=find_packages(),
     include_package_data=False,
-    install_requires=["fcntl","dot3k","sys","time","requests","pyowm","googlemaps"], #Get the Dependencies from Pypi (pip install)
+    install_requires=["pyowm","googlemaps"], #Get the Dependencies from Pypi (pip install)
     dependency_links=['https://github.com/pimoroni/displayotron'], #Get the Dependencies via HTTP(s)
 )
