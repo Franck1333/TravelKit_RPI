@@ -4,6 +4,10 @@
 #Aides : Using set-me-up.py from https://gist.github.com/ojii/3906682 ,
 #Aides : The generator "set-me-up.py" need a "__init__.py" file in the main root directorie to work .
 
+#HOW INSTALL AND USE THIS PROJECT:
+#in the console : sudo python setup.py install
+#And all the depencies will be installed with the Project
+
 from setuptools import setup, find_packages
 
 setup(
