@@ -55,15 +55,20 @@ Now especially for the Display'O'Tron 3000 in our case :
 	- Directory 'library'
 ```
   
-### Installing  
+### Downloading/Installing - EASY WAY !!!  
 To get and install the files , use this line : 
 ```
 git clone https://github.com/Franck1333/TravelKit_RPI.git
 ```
 
 - When the project is Downloaded and Installed , check your "pi" folder , and you will see the folder "TravelKit_RPI"
+When you did it , you will have to launch the file called "setup.py" to install the dependencies neccessary for the project with this command line : 
 
-### NEED TO BE INSTALL BEFORE RUNNING
+```
+  sudo python setup.py install
+```
+
+### Or you can do it by yourself with those command lines :
 
 #### The Weather API :
 ```
