@@ -56,12 +56,12 @@ Now especially for the Display'O'Tron 3000 in our case :
 ```
   
 ### Downloading/Installing - EASY WAY !!!  
-To get and install the files , use this line : 
+To get and downloaded the files , use this line : 
 ```
 git clone https://github.com/Franck1333/TravelKit_RPI.git
 ```
 
-- When the project is Downloaded and Installed , check your "pi" folder , and you will see the folder "TravelKit_RPI"
+- When the project is Downloaded , check your "pi" folder , and you will see the folder "TravelKit_RPI"
 When you did it , you will have to launch the file called "setup.py" to install the dependencies neccessary for the project with this command line : 
 
 ```
