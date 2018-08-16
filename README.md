@@ -81,6 +81,7 @@ When you did it , you will have to launch the file called "setup.py" to install 
   sudo pip install -U googlemaps
 ```
 
+### This commmand line must be executed anyway to install the DOT3K DISPLAY: 
 #### The Display'O'Tron Softwares and libs :
 
 ```
