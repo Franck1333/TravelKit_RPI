@@ -67,6 +67,12 @@ When you did it , you will have to launch the file called "setup.py" to install 
 ```
   sudo python setup.py install
 ```
+### This commmand line must be executed anyway to install the DOT3K DISPLAY : 
+#### The Display'O'Tron Softwares and libs :
+
+```
+  curl -sS get.pimoroni.com/displayotron | bash
+```
 
 ### Or you can do it by yourself with those command lines :
 
@@ -81,12 +87,6 @@ When you did it , you will have to launch the file called "setup.py" to install 
   sudo pip install -U googlemaps
 ```
 
-### This commmand line must be executed anyway to install the DOT3K DISPLAY: 
-#### The Display'O'Tron Softwares and libs :
-
-```
-  curl -sS get.pimoroni.com/displayotron | bash
-```
 ## Run
 #### First Way to run the project :
 To run the project , you can run the small script file called "Start_DOT3K_TravelKit.sh" in the folder "START" ; it's will launch the project in the background
