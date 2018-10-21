@@ -1,4 +1,4 @@
-# TravelKit_RPI  
+﻿# TravelKit_RPI  
   
 This Project give you useful details about the environement where you are by Using an USB GPS and some API with an Internet Connection. 
   
@@ -31,7 +31,7 @@ A screen (Diplayotron 3000 or other Displays)
 		-sys
 		-from urllib2 import urlopen
 		-json
-		-googlemaps (API GOOGLEMAPS pip install -U googlemaps)
+		-geopy (API GEOPY pip install geopy)
 		-datetime
 		-unicodedata
 		-requests
@@ -81,10 +81,10 @@ When you did it , you will have to launch the file called "setup.py" to install 
   sudo pip install pyowm
 ```
 
-#### The Google Maps API :
+#### The GeoPy API :
 
 ```
-  sudo pip install -U googlemaps
+  sudo pip install geopy
 ```
 
 ## Run
@@ -172,7 +172,7 @@ Boussole.py 					: Get Compass data by using the "Recuperation_Determination.py"
 GPSoI.py 					: Get the location of the user's IP Adress by using the *IPSTACK.COM API*
 Meteo.py 					: Get the Weather's data by using *pyown API* and the "Recuperation_Determination.py" file's data
 Meteo_3h.py 					: Get the Weather's data by using *pyown API* and the "Recuperation_Determination.py" file's data with a forecast of 3 Hours
-Recuperation_Determination.py 			: Get information come from the GPS USB stick and determinate the location with the *Google Maps API*
+Recuperation_Determination.py 			: Get information come from the GPS USB stick and determinate the location with the *GeoPy API*
 Recuperation_FR_GPS.py 				: Allow to display the information come from the GPS USB stick in French
 ```
 #### Files in "/TravelKit_RPI/START/"

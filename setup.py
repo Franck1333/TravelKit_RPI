@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='TravelKit_RPI',
-    version="1.13",
+    version="1.73",
     author='Franck Rochat',
     author_email='rochat.franck@gmail.com',
     description='This Project give you useful details about the environement where you are by Using an USB GPS and some API with an Internet Connection',
@@ -20,6 +20,6 @@ setup(
     license='lgpl',
     packages=find_packages(),
     include_package_data=False,
-    install_requires=["pyowm","googlemaps"], #Get the Dependencies from Pypi (pip install)
+    install_requires=["pyowm","geopy"], #Get the Dependencies from Pypi (pip install)
     dependency_links=['https://github.com/pimoroni/displayotron'], #Get the Dependencies via HTTP(s)
 )

@@ -5,7 +5,10 @@
 #https://gist.github.com/Lauszus/5785023
 #https://raspberry-pi.developpez.com/cours-tutoriels/projets-rpi-zero/traceur-gps/
 #https://stackoverflow.com/questions/20169467/how-to-convert-from-longitude-and-latitude-to-country-or-city
-#https://github.com/googlemaps/google-maps-services-python
+###https://github.com/googlemaps/google-maps-services-python
+#AIDES: https://github.com/geopy/geopy
+#AIDES: https://pypi.org/project/geopy/
+#AIDES: https://geopy.readthedocs.io/en/stable/index.html?highlight=reverse
 
 import serial
 import time
@@ -14,7 +17,19 @@ import sys
 from urllib2 import urlopen
 #from urllib.request import urlopen
 import json
-import googlemaps #pip install -U googlemaps
+
+#---REVERSE_GEOCODING_GEOPY---
+import geopy.geocoders                  #--> sudo pip install geopy 
+from geopy.geocoders import Nominatim   #Nominatim Service
+#---REVERSE_GEOCODING_GEOPY---
+
+#---
+#Cette blibliothèque permet de travailler avec du contenue contenant des accents
+import unidecode #--> sudo pip install unicode
+
+#unaccented_location = unidecode.unidecode(location.address)
+#---
+
 import datetime
 
 #import dot3k.lcd as lcd
@@ -295,29 +310,66 @@ def retourne_Longitude_Hemisphere():
     return Retourne_Longitude_Hemisphere                    #Retourne la nouvelle Valeur LONGITUDE_HEMISPHERE
 #-------------------------------
 def determine():
-    gmaps = googlemaps.Client(key='AIzaSyCbcLmcGDUQlhvZhAkdE0IUFh90rjJ7rrw') #Cle d'acces A.P.I
+   
+    geolocator = Nominatim(user_agent="GPS-SWAGG")                          #Utilisation des Services de Reverse-Geocoding de Nominatim, https://nominatim.openstreetmap.org/reverse.php?format=html
+
+    coordonees_GPS = str(Decimal_latitude) +","+ str(Decimal_longitude)
+
+    print(coordonees_GPS)
+
+    location = geolocator.reverse(coordonees_GPS)      #Envoie aux Services de Nominatim les coordonées GPS et reception de la Réponse
+
+    unaccented_location = unidecode.unidecode(location.address)             #On Retire les Accents de la Réponse de l'API
+    print("\n")                                                             #Saut de ligne
+    print(unaccented_location)                                              #Affichage de la Réponse (sans accents)
+    print("\n")                                                             #Saut de Ligne
+    #Potsdamer Platz, Mitte, Berlin, 10117, Deutschland, European Union
+
+    print((location.latitude, location.longitude))                          #Affichage des coordonées du Lieu indiqué
+    #(52.5094982, 13.3765983)
+
+    print("\n")
+    #print(location.raw)
+
+    Ville =         location.raw['address']['town']                         #Enregistrement de la Ville depuis la version "RAW" du Service Nominatim
+    Numero_Maison = location.raw['address']['house_number']                 #Enregistrement du Numéro de Rue depuis la version "RAW" du Service Nominatim
+    Rue =           location.raw['address']['road']                         #Enregistrement de la Rue depuis la version "RAW" du Service Nominatim
+    Code_Postal =   location.raw['address']['postcode']                     #Enregistrement du Code Postal depuis la version "RAW" du Service Nominatim
+    Pays =          location.raw['address']['country']                      #Enregistrement du Pays depuis la version "RAW" du Service Nominatim
+
+    print(Ville)                                                            #Affichage de la Ville
+    print(Numero_Maison)                                                    #Affichage du Numéro de Positionnement dans la Rue
+    print(Rue)                                                              #Affichage du Nom de la Rue
+    print(Code_Postal)                                                      #Affichage du Code Postal
+    print(Pays)                                                             #Affichage du Pays
+    #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
+
+    
+    #---------------------------------------------
+    #gmaps = googlemaps.Client(key='AIzaSyCbcLmcGDUQlhvZhAkdE0IUFh90rjJ7rrw') #Cle d'acces A.P.I
 
     #etat_trame() #Validation de la conformite de la Trame NMEA <--
 
-# Look up an address with reverse geocoding
-    reverse_geocode_result = gmaps.reverse_geocode((Decimal_latitude, Decimal_longitude)) #Envoie et Recuperation des Donnees
+    # Look up an address with reverse geocoding
+    #reverse_geocode_result = gmaps.reverse_geocode((Decimal_latitude, Decimal_longitude)) #Envoie et Recuperation des Donnees
 
-#Accessing the needed part of the response
-#reverse_geocode_result[0] # This is a dict
-#reverse_geocode_result[0]['address_components'][3]['long_name'] # Return La Region
-#reverse_geocode_result[0]['address_components'][4]['long_name'] # Return country 
-#reverse_geocode_result[0]['address_components'][2]['long_name'] # Return sublocality
-#reverse_geocode_result[0]['address_components'][1]['long_name'] # Return route
-#reverse_geocode_result[0]['address_components'][0]['long_name'] # Return street number
+    #Accessing the needed part of the response
+    #reverse_geocode_result[0] # This is a dict
+    #reverse_geocode_result[0]['address_components'][3]['long_name'] # Return La Region
+    #reverse_geocode_result[0]['address_components'][4]['long_name'] # Return country 
+    #reverse_geocode_result[0]['address_components'][2]['long_name'] # Return sublocality
+    #reverse_geocode_result[0]['address_components'][1]['long_name'] # Return route
+    #reverse_geocode_result[0]['address_components'][0]['long_name'] # Return street number
     
-    print("On se trouve a :")
+    #print("On se trouve a :")
     #print(reverse_geocode_result) Format JSON
 
-    resultat_Ville = reverse_geocode_result[0]['formatted_address'] #STRING LOCALISATION DETERMINE
-    print (resultat_Ville) #JSON Parse (trie)
+    #resultat_Ville = reverse_geocode_result[0]['formatted_address'] #STRING LOCALISATION DETERMINE
+    #print (resultat_Ville) #JSON Parse (trie)
     
-    return resultat_Ville #RETOURNE LE STRING DE LA LOCALISATION DETERMINE
+    #return resultat_Ville #RETOURNE LE STRING DE LA LOCALISATION DETERMINE
     #return reverse_geocode_result #RETOURNE LA LOCALISATION OBTENUE AU FORMAT JSON
+    #---------------------------------------------
 #-------------------------------
 
 #-------------------------------
@@ -325,19 +377,32 @@ def determine():
 def determine_less():
     etat_trame() #Validation de la conformite de la Trame NMEA <--
     
-    gmaps = googlemaps.Client(key='AIzaSyCbcLmcGDUQlhvZhAkdE0IUFh90rjJ7rrw') #Cle d'acces A.P.I    
+    geolocator = Nominatim(user_agent="GPS-SWAGG")                          #Utilisation des Services de Reverse-Geocoding de Nominatim, https://nominatim.openstreetmap.org/reverse.php?format=html
 
-# Look up an address with reverse geocoding
-    reverse_geocode_result = gmaps.reverse_geocode((Decimal_latitude, Decimal_longitude)) #Envoie et Recuperation des Donnees
-    
-    print("Ici c'est :")
-    #print(reverse_geocode_result) Format JSON
+    coordonees_GPS = str(Decimal_latitude) +","+ str(Decimal_longitude)
 
-    resultat_Ville_less = reverse_geocode_result[0]['address_components'][2]['long_name'] #STRING LOCALISATION DETERMINE
-    print (resultat_Ville_less) #JSON Parse (trie)
-    
-    return resultat_Ville_less #RETOURNE LE STRING DE LA LOCALISATION DETERMINE
-    #return reverse_geocode_result #RETOURNE LA LOCALISATION OBTENUE AU FORMAT JSON
+    print(coordonees_GPS)
+
+    location = geolocator.reverse(coordonees_GPS)      #Envoie aux Services de Nominatim les coordonées GPS et reception de la Réponse
+
+    unaccented_location = unidecode.unidecode(location.address)             #On Retire les Accents de la Réponse de l'API
+    print("\n")                                                             #Saut de ligne
+    print(unaccented_location)                                              #Affichage de la Réponse (sans accents)
+    print("\n")                                                             #Saut de Ligne
+    #Potsdamer Platz, Mitte, Berlin, 10117, Deutschland, European Union
+
+    print((location.latitude, location.longitude))                          #Affichage des coordonées du Lieu indiqué
+    #(52.5094982, 13.3765983)
+
+    print("\n")
+    #print(location.raw)
+
+    Ville =         location.raw['address']['town']                         #Enregistrement de la Ville depuis la version "RAW" du Service Nominatim
+    Pays =          location.raw['address']['country']                      #Enregistrement du Pays depuis la version "RAW" du Service Nominatim
+
+    print(Ville)                                                            #Affichage de la Ville
+    print(Pays)                                                             #Affichage du Pays
+    #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
 #-------------------------------
 #-------------------------------
 def lecture_serie():
