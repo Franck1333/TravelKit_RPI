@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='TravelKit_RPI',
-    version="1.73",
+    version="1.33",
     author='Franck Rochat',
     author_email='rochat.franck@gmail.com',
     description='This Project give you useful details about the environement where you are by Using an USB GPS and some API with an Internet Connection',
