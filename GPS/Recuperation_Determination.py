@@ -343,8 +343,8 @@ def determine():
     print(Code_Postal)                                                      #Affichage du Code Postal
     print(Pays)                                                             #Affichage du Pays
     #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
-
-    
+    resultat_Ville = Ville
+    return resultat_Ville #RETOURNE LE STRING DE LA LOCALISATION DETERMINE    
     #---------------------------------------------
     #gmaps = googlemaps.Client(key='AIzaSyCbcLmcGDUQlhvZhAkdE0IUFh90rjJ7rrw') #Cle d'acces A.P.I
 
@@ -403,6 +403,8 @@ def determine_less():
     print(Ville)                                                            #Affichage de la Ville
     print(Pays)                                                             #Affichage du Pays
     #{'place_id': '654513', 'osm_type': 'node', ...}                        #Exemple du format des données reçu enregistrer dans "location.raw"
+    resultat_Ville = Ville
+    return resultat_Ville #RETOURNE LE STRING DE LA LOCALISATION DETERMINE
 #-------------------------------
 #-------------------------------
 def lecture_serie():
